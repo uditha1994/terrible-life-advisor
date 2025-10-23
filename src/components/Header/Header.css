@@ -1,45 +1,83 @@
 .header {
-    background: linear-gradient(135deg, var(--bg-primary), var(--bg-teritary));
-    border-bottom: 2px solid var(--border-color);
-    padding: var(--spacing-2xl);
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--spacing-2xl) 0;
+    position: relative;
     overflow: hidden;
 }
 
-.header:before{
+.header::before {
     content: '';
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 30%,rgba(99, 104, 241, 0.1) 50%, transparent 70%);
-    animation: runner 3s ease-in-out infinite;
+    background: linear-gradient(45deg, transparent 30%, rgba(99, 102, 241, 0.1) 50%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
 }
 
-/* @keyframes runner {
-    0%, 100% {transform: translateX(-100%);}
-    50% {transform: translateX(100%);}
-} */
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+}
 
 .header-content {
     text-align: center;
     position: relative;
+    z-index: 1;
 }
 
 .header-title {
-    display:  flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    animation: fadeIn 0.8s ease-out;
 }
 
 .title-icon {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-4xl);
+    animation: pulse 2s infinite;
 }
 
-.header-subtitle{
+.title-text {
+    font-size: var(--font-size-3xl);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+}
+
+.header-subtitle {
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
+    max-width: 600px;
     margin: 0 auto;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .header-title {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .title-text {
+        font-size: var(--font-size-2xl);
+    }
+
+    .header-subtitle {
+        font-size: var(--font-size-base);
+    }
 }

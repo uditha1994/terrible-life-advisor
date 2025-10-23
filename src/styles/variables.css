@@ -1,29 +1,79 @@
 :root {
-    /*colors*/
-    --primary-color: #6366f1;
-    --secondary-color: #ec4899;
-    --primary-dark: #4f46e5;
-    --accent-color: #f59e0b;
-    --danger-color: #ef4444;
-    --warning-color: #f59e0b;
-    --success-color: #10b981;
+    /* Primary Colors - Chaotic and Bold */
+    --primary-color: #ff6b35;
+    /* Aggressive Orange */
+    --primary-dark: #e55a2b;
+    /* Darker Orange */
+    --secondary-color: #f72585;
+    /* Hot Pink/Magenta */
+    --accent-color: #4cc9f0;
+    /* Electric Blue */
+    --success-color: #7209b7;
+    /* Purple (ironic "success") */
+    --warning-color: #ffbe0b;
+    /* Screaming Yellow */
+    --danger-color: #fb8500;
+    /* Danger Orange */
 
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-teritary: #334155;
-    --bg-card: #1e293b;
-    --bg-card-hover: #334155;
+    /* Terrible Accent Colors */
+    --chaos-green: #06ffa5;
+    /* Neon Green */
+    --toxic-purple: #b084cc;
+    /* Toxic Purple */
+    --nightmare-red: #d00000;
+    /* Nightmare Red */
+    --vomit-yellow: #ffff3f;
+    /* Vomit Yellow */
 
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
+    /* Dark Backgrounds - Dramatic and Moody */
+    --bg-primary: #0d1117;
+    /* Almost Black */
+    --bg-secondary: #161b22;
+    /* Dark Gray */
+    --bg-tertiary: #21262d;
+    /* Medium Dark Gray */
+    --bg-card: #1c2128;
+    /* Card Background */
+    --bg-card-hover: #262c36;
+    /* Card Hover */
 
-    /* borders */
-    --border-color: #334155;
-    --border-radius: 15px;
-    --border-radius-lg: 18px;
+    /* Text Colors */
+    --text-primary: #f0f6fc;
+    /* Almost White */
+    --text-secondary: #8b949e;
+    /* Light Gray */
+    --text-muted: #6e7681;
+    /* Muted Gray */
+    --text-accent: #ff6b35;
+    /* Orange Text */
+    --text-chaos: #4cc9f0;
+    /* Blue Text */
 
-    /* spacing */
+    /* Borders */
+    --border-color: #30363d;
+    /* Dark Border */
+    --border-accent: #ff6b35;
+    /* Orange Border */
+    --border-chaos: #f72585;
+    /* Pink Border */
+    --border-radius: 12px;
+    --border-radius-lg: 16px;
+
+    /* Terrible Gradients */
+    --gradient-chaos: linear-gradient(135deg, #ff6b35, #f72585, #4cc9f0);
+    --gradient-nightmare: linear-gradient(45deg, #d00000, #fb8500, #ffbe0b);
+    --gradient-toxic: linear-gradient(90deg, #06ffa5, #7209b7, #b084cc);
+    --gradient-vomit: linear-gradient(180deg, #ffff3f, #ffbe0b, #ff6b35);
+
+    /* Shadows - More Dramatic */
+    --shadow-sm: 0 1px 2px 0 rgba(255, 107, 53, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(255, 107, 53, 0.2), 0 2px 4px -2px rgba(247, 37, 133, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(255, 107, 53, 0.3), 0 4px 6px -4px rgba(247, 37, 133, 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(255, 107, 53, 0.4), 0 8px 10px -6px rgba(247, 37, 133, 0.3);
+    --shadow-chaos: 0 0 20px rgba(76, 201, 240, 0.5);
+    --shadow-nightmare: 0 0 30px rgba(208, 0, 0, 0.6);
+
+    /* Spacing */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -31,17 +81,50 @@
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
 
-    /* font size */
+    /* Typography */
     --font-size-xs: 0.75rem;
-    --font-size-sm: 0.85rem;
+    --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
-    --font-size-lg: 1.1rem;
+    --font-size-lg: 1.125rem;
     --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.8rem;
-    --font-size-3xl: 2.5rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
 
-    /* transition */
+    /* Transitions */
     --transition-fast: 150ms ease-in-out;
     --transition-normal: 250ms ease-in-out;
     --transition-slow: 350ms ease-in-out;
+    --transition-chaos: 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Seriousness Level Colors */
+    --level-mild: #06ffa5;
+    /* Neon Green */
+    --level-moderate: #ffbe0b;
+    /* Yellow */
+    --level-severe: #fb8500;
+    /* Orange */
+    --level-unhinged: #d00000;
+    /* Red */
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #0d1117;
+        --bg-tertiary: #161b22;
+    }
+}
+
+/* High contrast terrible mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #ff0080;
+        --secondary-color: #00ff80;
+        --accent-color: #8000ff;
+        --bg-primary: #000000;
+        --text-primary: #ffffff;
+        --border-color: #ff6b35;
+    }
 }

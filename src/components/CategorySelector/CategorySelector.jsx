@@ -1,5 +1,5 @@
 import './CategorySelector.css';
-import { CATEGORIES, CATEGORY_LABEL, CATEGORY_INFO } from '../../data/adviceData.js'
+import { CATEGORIES, CATEGORY_LABEL, CATEGORY_INFO } from '../../data/adviceData'
 
 const CategorySelector = ({ selectedCategory, onCategoryChange }) => {
     return (
@@ -11,7 +11,7 @@ const CategorySelector = ({ selectedCategory, onCategoryChange }) => {
                         key={category}
                         className={`category-button ${selectedCategory === category ? 'active' : ''}`}
                         aria-label={`Select ${CATEGORY_LABEL[category]} category`}
-                        onClick={()=>onCategoryChange(category)}
+                        onClick={() => onCategoryChange(category)}
                     >
                         <span className="category-icon">
                             {CATEGORY_INFO[category].icon}

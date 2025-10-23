@@ -114,7 +114,7 @@ export const ADVICE_DATA = {
             "Propose by hiring a mariachi band to follow your partner around for three months straight."
         ]
     },
-    [CATEGORIES.MONEY]: {
+    [CATEGORIES.FINANCE]: {
         [SERIOUSNESS_LEVELS.MILD]: [
             "Invest all your savings in beanie babies. They're due for a comeback.",
             "Start a budget using only Monopoly money for authenticity.",

@@ -13,7 +13,8 @@ export const useAdviceGenerator = () => {
         setIsGenerating(true);
 
         const categoryAdvice = ADVICE_DATA[selectedCategory];
-        const levelAdvice = categoryAdvice[SERIOUSNESS_LEVELS];
+
+        const levelAdvice = categoryAdvice[seriousnessLevel];
 
         if (levelAdvice && levelAdvice.length > 0) {
             const randomIndex = Math.floor
