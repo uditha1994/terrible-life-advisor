@@ -35,8 +35,30 @@ const AdviceCard = ({ advice, isGenerating, onGenerateAdvice, onReset }) => {
                     disabled={isGenerating}
                     aria-label='Generate new advice'
                 >
-                    {isGenerating ? (): ()}
+                    {isGenerating ? (
+                        <>
+                            <span className='btn-spinner'></span>
+                            Generating...
+                        </>
+                    ) : (
+                        <>
+                            <span className='btn-icon'>💎</span>
+                            Give me Terrible Advice!
+                        </>
+                    )}
                 </button>
+
+                {advice && !isGenerating && (
+                    <button
+                        className='btn btn-secondary reset-btn 
+                        animate-slide-in'
+                        onClick={onReset}
+                        aria-label='Reset advice'
+                    >
+                        <span className='btn-icon'>🔃</span>
+                        Try Again
+                    </button>
+                )}
             </div>
         </div>
     )
