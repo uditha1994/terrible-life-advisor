@@ -1,6 +1,7 @@
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import CategorySelector from './components/CategorySelector/CategorySelector.jsx';
+import SeriousnessSlider from './components/SeriousnessSlider/SeriousnessSlider.jsx';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
 
       <CategorySelector/>
       
+      <SeriousnessSlider />
+
       <Footer />
     </div>
   )
